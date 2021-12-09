@@ -12,7 +12,7 @@ import java.util.List;
  * @author : [Zara-cat]
  * @version : [v1.0]
  * @className : IUserDao
- * @description : [描述说明该类的功能]
+ * @description : [user 持久层接口]
  * @createTime : [2021/12/8 17:05]
  * @updateUser : [Zara-cat]
  * @updateTime : [2021/12/8 17:05]
@@ -20,5 +20,11 @@ import java.util.List;
  */
 @Mapper
 public interface IUserDao {
+
+    /**
+     * 查询列表
+     * @param dto
+     * @return
+     */
     List<UserPageResVo> selAll(@Param("UserPageReqDto") UserPageReqDto dto);
 }

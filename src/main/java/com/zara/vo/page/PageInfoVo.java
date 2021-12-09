@@ -1,4 +1,4 @@
-package com.zara.vo;
+package com.zara.vo.page;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
@@ -15,7 +15,7 @@ import java.util.List;
  * @author : [Zaara-cat]
  * @version : [v1.0]
  * @className : PageInfoVo
- * @description : [描述说明该类的功能]
+ * @description : [分页查询 统一VO对象]
  * @createTime : [2021/12/8 15:45]
  * @updateUser : [Zaara-cat]
  * @updateTime : [2021/12/8 15:45]

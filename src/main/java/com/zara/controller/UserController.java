@@ -1,10 +1,9 @@
 package com.zara.controller;
 
 import com.zara.dto.UserPageReqDto;
-import com.zara.entity.PageParam;
-import com.zara.entity.User;
+import com.zara.entity.page.PageParam;
 import com.zara.service.IUserService;
-import com.zara.vo.PageInfoVo;
+import com.zara.vo.page.PageInfoVo;
 import com.zara.vo.UserPageResVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,14 +29,14 @@ public class UserController {
 
     @PostMapping("/page")
     public PageInfoVo<UserPageResVo> page(@RequestBody PageParam<UserPageReqDto> dtoPageParam){
-        dtoPageParam.getParam().setUsernameOrAddress("%"+dtoPageParam.getParam().getUsernameOrAddress()+"%");
         PageInfoVo<UserPageResVo> page = service.page(dtoPageParam);
         page.getList().forEach(System.out::println);
         return page;
     }
 
-    @GetMapping("/list")
-    public List<User> list(){
-        return null;
+    @PostMapping("/list")
+    public List<UserPageResVo> list(@RequestBody UserPageReqDto dto){
+        List<UserPageResVo> list = service.list(dto);
+        return list;
     }
 }

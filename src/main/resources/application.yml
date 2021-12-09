@@ -1,20 +1,24 @@
+#项目配置
 server:
   port: 8080
+#数据源配置
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/user_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useSSL=false
     username: root
     password: 1111
+# mybatis 配置
 mybatis:
   mapper-locations: classpath:com/zara/mapper/*.xml
 
-#\u5206\u9875\u914D\u7F6E
+#Pagehelper配置
 pagehelper:
   auto-dialect: mysql
   reasonable: true
   support-methods-arguments: true
   params: count=countSql,pageNum=pageNum,pageSize=pageSize
+#sql 日志打印
 logging:
   level:
     com.zara.dao : debug

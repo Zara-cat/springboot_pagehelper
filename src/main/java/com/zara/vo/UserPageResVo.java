@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
  * @author : [Zara-cat]
  * @version : [v1.0]
  * @className : UserPageResVo
- * @description : [分页响应 UserVo对象]
+ * @description : [UserVo对象]
  * @createTime : [2021/12/9 11:16]
  * @updateUser : [Zara-cat]
  * @updateTime : [2021/12/9 11:16]
@@ -20,7 +20,10 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserPageResVo {
+    //用户id
     private Integer id;
+    // 用户名
     private String username;
+    //地址
     private String address;
 }
